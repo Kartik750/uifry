@@ -1,0 +1,1085 @@
+@font-face {
+    font-family: 'clash display normal';
+    src: url('/uifry/fonts/ClashDisplay-Regular.otf');
+}
+@font-face {
+    font-family: 'clash display bold';
+    src: url('/uifry/fonts/ClashDisplay-Bold.otf');
+}
+@font-face {
+    font-family: 'clash display extralight';
+    src: url('/uifry/fonts/ClashDisplay-Extralight.otf');
+}
+@font-face {
+    font-family: 'clash display light';
+    src: url('/uifry/fonts/ClashDisplay-Light.otf');
+}
+@font-face {
+    font-family: 'clash display medium';
+    src: url('/uifry/fonts/ClashDisplay-Medium.otf');
+}
+@font-face {
+    font-family: 'clash display semibold';
+    src: url('/uifry/fonts/ClashDisplay-Semibold.otf');
+}
+
+*{
+    margin: 0;
+    padding: 0;
+}
+
+.body{
+    overflow-x: hidden;
+    width: 100%;
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    align-items: center;
+    transition: all 0.2s ease-in-out;
+}
+
+.header{
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    margin: 20px 0px;
+    position: fixed;
+    background-color: white;
+    z-index: 1;
+    background-color: transparent;
+}
+.nav{
+    height: 60px;
+    width: 1090px;
+    display: flex;
+    flex-direction: row;
+    z-index: 1;
+    border-radius: 5px;
+    backdrop-filter: blur(50px);
+}
+
+.headLogo{
+    width: 10%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.headNav{
+    font-family: clash display medium;
+    width: 40%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+.headNav ul{
+    display: flex;
+    width: 100%;
+    justify-content: space-around;
+    align-items: center;
+    list-style: none;
+}
+.headNav ul li a{
+    text-decoration: none;
+    color: black;
+}
+
+.headDownload{
+    width: 50%;
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
+}
+.headDownload button{
+    height: 60px;
+    width: 180px;
+    font-family: clash display light;
+    background-color: #000000;
+    color: white;
+    cursor: pointer;
+    outline: 0;
+    border: 0;
+    border-radius: 4px;
+    transition: all 0.2s ease-in-out;
+}
+.headDownload button:hover{
+    background-color: #FF5555;
+}
+.headDownload button:active{
+    transform: scale(0.90);
+}
+
+.resNav{
+    z-index: 1;
+    background-color: white;
+    width: 100%;
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+    display: none;
+}
+.resNav ul{
+    list-style: none;
+}
+.resNav ul li{
+    margin: 20px;
+}
+.resNav ul li a{
+    text-decoration: none;
+    color: black;
+    font-family: clash display medium;
+    font-size: 20px;
+}
+
+@media screen and (min-width: 1221px) {
+    .resBttn{
+        width: 0;
+        position: absolute;
+        display: none;
+    }
+}
+@media screen and (min-width: 0px) and (max-width: 1220px) {
+    .header{
+        position: fixed;
+        width: 100%;
+    }
+    .resBttn{
+        display: flex;
+        height: 30px;
+        width: auto;
+        margin: 0px 20px;
+    }
+    .resBttn img{
+        cursor: pointer;
+    }
+    .nav{
+        width: 90%;
+    }
+    .headLogo{
+        transform: scale(1.30);
+        width: 50%;
+        justify-content: flex-end;
+    }
+    .headNav{
+        width: 0;
+        display: none;
+        position: absolute;
+    }
+    .headDownload{
+        width: 50%;
+    }
+
+}
+@media screen and (min-width: 0px) and (max-width: 780px) {
+    .headLogo{
+        justify-content: center;
+    }
+}
+@media screen and (min-width: 0px) and (max-width: 400px) {
+    .headLogo{
+        transform: scale(1);
+    }
+    .headDownload button{
+        transform: scale(0.90);
+    }
+    .headDownload button:active{
+        transform: scale(0.75);
+    }
+}
+
+.main{
+    display: flex;
+    flex-direction: column;
+    z-index: 0;
+    position: relative;
+    margin-top: 215px;
+    width: 100%;
+}
+
+.first{
+    position: relative;
+    display: flex;
+    flex-direction: row;
+}
+
+.firstLeft{
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    justify-content:center;
+    width: 50%;
+    padding-left: 100px;
+}
+
+.firstLeftBack{
+    position: absolute;
+    top: -150px;
+    left: 100px;
+    z-index: -1;
+}
+
+.firstLeftHead{
+    height: 128px;
+    width: 618px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-bottom: 32px;
+}
+.firstLeftHead h1{
+    height: 128px;
+    width: 618px;
+    font-family: clash display bold;
+    font-size: 55px;
+}
+
+.firstLeftPara{
+    margin: 10px 0px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.firstLeftPara p{
+    height: 56px;
+    width: 638px;
+    font-size: 18px;
+    font-family: clash display light;
+}
+
+.firstRight{
+    position: relative;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 50%;
+}
+.firstRightImg{
+    background-repeat: no-repeat;
+    background-size: cover;
+    position:absolute;
+    height: auto;
+    width: auto;
+    left: -50px;
+    top: -150px;
+}
+
+.firstLeftStarted{
+    margin: 10px 0px;
+    height: 60px;
+    width: 368px;
+    display: flex;
+    flex-direction: row;
+}
+.firstLeftBttn{
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+    width: 60%;
+    font-size: 18px;
+}
+.firstLeftBttn button{
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+}
+.firstLeftWatch{
+    width: 40%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.firstLeftWatch a{
+    width: 100%;
+    text-decoration: none;
+    color: black;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    font-family: clash display medium;
+}
+.firstLeftImg{
+    margin: 10px 0px;
+    width: 100%;
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+}
+
+
+
+.second, .third, .fourth{
+    position: relative;
+    width: 100%;
+}
+
+.features, .advantages, .custom{
+    display: flex;
+    flex-direction: row;
+}
+
+.featuresImg{
+    width: 50%;
+}
+
+.featuresCont{
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    width: 50%;
+    position: relative;
+}
+
+.featuresActualCont{
+    position: absolute;
+    height: 464px;
+    width: 500px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: flex-start;
+}
+
+.featuresActualHead, .customActualHead{
+    display: flex;
+    flex-direction: column;
+}
+.featuresActualHead h3, .advantagesActualHead h3{
+    font-family: clash display medium;
+    font-size: 18px;
+    color: #FF5555;
+}
+.featuresActualHead h1, .advantagesActualHead h1{
+    font-family: clash display bold;
+    font-size: 48px;
+}
+
+.featuresActualHead{
+    margin-bottom: 32px;
+}
+.featuresActualHead h3{
+    margin-bottom: 4px;
+}
+.featuresActualOne, .featuresActualTwo, .featuresActualThree{
+    margin-bottom: 32px;
+}
+.featuresActualOne svg, .featuresActualTwo svg, .featuresActualThree svg{
+    margin-bottom: 12px;
+}
+
+.featuresActualOne, .featuresActualTwo, .featuresActualThree, .advantagesActualOne, .customActualOne{
+    display: flex;
+    flex-direction: column;
+}
+.featuresActualOneHead, .featuresActualTwoHead, .featuresActualThreeHead, .advantagesActualOneHead, .customActualOneHead{
+    display: flex;
+    flex-direction: row;
+}
+.featuresActualOneHead h1, .featuresActualTwoHead h1, .featuresActualThreeHead h1, .advantagesActualOneHead h1, .customActualOneHead h1{
+    font-size: 18px;
+    font-family: clash display semibold;
+    margin: 0px 10px;
+}
+.featuresActualOnePara p, .featuresActualTwoPara p, .featuresActualThreePara p, .advantagesActualOnePara p, .customActualOnePara p{
+    font-family: clash display medium;
+    font-size: 18px;
+    color: rgba(0,0,0,0.5);
+    margin: 15px 0px;
+}
+
+.featuresActualImg{
+    width: 100%;
+    display: flex;
+    justify-content: flex-end;
+    align-items: flex-start;
+}
+
+.advantagesActualCont{
+    width: 50%;
+    display: flex;
+    flex-direction: column;
+    align-content: center;
+    justify-content: center;
+    padding-left: 175px;
+}
+
+.advantagesActualHead{
+    display: flex;
+    flex-direction: column;
+}
+
+.advantagesActualOnePara{
+    width: 70%;
+}
+
+.advantagesActualOneHead{
+    justify-content: flex-start;
+    align-items: center;
+}
+
+.advantagesActualImg{
+    width: 50%;
+}
+
+.advantagesCont{
+    display: flex;
+    flex-direction: row;
+}
+
+.customCont{
+    display: flex;
+    flex-direction: row;
+}
+
+.customActualCont{
+    width: 50%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+
+.customActualOnePara p{
+    width: 70%;
+}
+
+.customActualOneHead{
+    justify-content: flex-start;
+    align-items: center;
+}
+
+.customActualImg{
+    width: 50%;
+}
+
+
+.customStar{
+    width: 70%;
+    height: 20%;
+    display: flex;
+    justify-content: flex-end;
+    align-items: flex-end;
+}
+
+.fifth{
+    display: flex;
+    flex-direction: column;
+}
+
+.fifthTest{
+    display: flex;
+    flex-direction: column;
+}
+
+.fifthTest h3{
+    font-family: clash display medium;
+    font-size: 18px;
+    letter-spacing: 0.2rem;
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.fifthTest h1{
+    font-family: clash display bold;
+    font-size: 48px;
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.fifthCont{
+    display: flex;
+    flex-direction: row;
+}
+
+.fifthContLeft{
+    width: 50%;
+}
+
+.fifthContRight{
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+    width: 50%;
+}
+
+.testi{
+    height: 392px;
+    width: 442px;
+    display: flex;
+    flex-direction: column;
+}
+
+.testiHead h1{
+    font-family: clash display semibold;
+    font-size: 28px;
+    margin-bottom: 24px; 
+}
+
+.testiCont p{
+    font-family: clash display medium;
+    font-size: 18px;
+    margin-bottom: 24px;
+    color: rgba(0,0,0,0.5);
+}
+
+.testidp{
+    height: 40px;
+    width: 192px;
+    margin-bottom: 24px;
+}
+
+.testidpName h2{
+    font-family: clash display semibold;
+    font-size: 18px;
+}
+
+.sixth{
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-bottom: 20px;
+}
+
+.faq{
+    height: 751px;
+    width: 1090px;
+    display: flex;
+    flex-direction: column;
+}
+
+.faqHead{
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+}
+
+.faqHead h3{
+    color:#FF5555;
+    letter-spacing: 0.2rem;
+    font-family: clash display medium;
+    font-size: 18px;
+}
+
+.faqHead h1{
+    font-family: clash display bold;
+    font-size: 48px;
+    height: 96px;
+    width: 497px;
+}
+
+.faqHead svg{
+    width: 100%;
+
+}
+
+.faqCont{
+    display: grid;
+    grid-template-columns: auto auto;
+}
+
+.one, .four, .five{
+    height: 181px;
+    width: 535px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    background-color: #FF5555;
+    border-radius: 8px;
+    color: white;
+    margin: 10px;
+}
+
+.one h1, .two h1, .three h1, .four h1, .five h1, .six h1{
+    font-size: 28px;
+    font-family: clash display semibold;
+    height: 56px;
+    width: 474px;
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+}
+
+.one p, .two p, .three p, .four p, .five p, .six p{
+    font-size: 18px;
+    font-family: clash display medium;
+    height: 56px;
+    width: 466px;
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+}
+
+.two, .three, .six{
+    margin: 10px;
+    height: 181px;
+    width: 535px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.seventh{
+    display: flex;
+}
+
+.seventhLeft{
+    width: 50%;
+}
+
+.seventhRight{
+    width: 50%;
+    display: flex;
+    justify-content: flex-end;
+    align-items: flex-start;
+}
+
+.eighth{
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.eighthImg{
+    height: 508px;
+    width: 1090px;
+    margin-top: -300px;
+}
+
+.footer{
+    margin-top: 155px;
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.footerEnd{
+    height: 406px;
+    width: 1091px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+}
+
+.footerOne{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+}
+
+.footerLogo ul, .footerLinks ul, .footerLegal ul, .footerProduct ul, .footerNews ul{
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    align-items: flex-start;    
+}
+.footerLogo ul li, .footerLinks ul li, .footerLegal ul li, .footerProduct ul li, .footerNews ul li{
+    list-style: none;
+    margin-bottom: 16px;
+}
+.footerLogo ul li a, .footerLinks ul li a, .footerLegal ul li a, .footerProduct ul li a, .footerNews ul li a{
+    text-decoration: none;
+    color: black;
+}
+
+.footerLinks ul li a h1, .footerLegal ul li a h1, .footerProduct ul li a h1, .footerProduct ul li a h1, .footerNews ul li a h1{
+    font-size: 32px;
+    font-family: clash display medium;
+}
+.footerLinks ul li a h3, .footerLegal ul li a h3, .footerProduct ul li a h3, .footerNews ul li a h3{
+    font-size: 18px;
+    font-family: clash display medium;
+}
+
+.footerMail{
+    position: relative;
+}
+.footerMail form{
+    position: relative;
+    height: 81px;
+    width: 340px;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+
+}
+.footerMail form input{
+    height: 100%;
+    width: 50%; 
+    position: absolute;
+    font-size: 16px;
+    font-family: clash display medium;
+    border: 0;
+    outline: 0;
+    padding-right: 250px;
+}
+.footerMail form button{
+    position: relative;
+    height: 61px;
+    width: 160px;
+    background-color: #000000;
+    color: White;
+    font-size: 16px;
+    font-family: clash display medium;
+    border-radius: 8px;
+    left: 200px;
+}
+
+.footerCont{
+    border-top: 2px solid transparent;
+    border-image: linear-gradient(to right, white, rgba(0,0,0,0.5), white);
+    border-image-slice: 1;
+    height: 104px;
+    width: 1090px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.footerCont p{
+    font-size: 16px;
+    font-family: clash display medium;
+}
+
+@media screen and (min-width: 850px) and (max-width: 1170px) {
+    .firstLeftHead{
+        width: 95%;
+        transform: scale(0.80);
+        margin-bottom: 10%;
+    }
+    .firstLeftPara{
+        width: 95%;
+        margin-bottom: 10%;
+    }
+    .headDownload button{
+        transform: scale(0.95);
+    }
+    .firstRightImg{
+        left: 0;
+        right: 0;
+    }
+    .firstRightImg svg{
+        width: 95%;
+    } 
+}
+
+@media screen and (min-width: 850px) and (max-width: 1285px) {
+    .customActualImg svg{
+        width: 100%;
+    }
+    .customActualOneHead{
+        width: 95%;
+    }
+    .customActualOnePara{
+        width: 95%;
+    }
+    .advantagesActualHead{
+        width: 100%;
+        border: 1px solid blue;
+    }
+    .advantagesActualOne{
+        border: 1px solid blue;
+        width: 100%;
+    }
+    .advantagesActualImg svg{
+        width: 100%;
+    }
+}
+
+@media screen and (min-width: 850px) and (max-width: 1290px) {
+    .testiHead{
+        width: 90%;
+    }
+    .testiCont{
+        width: 90%;
+    }
+    .testidp svg{
+        width: 90%;
+    }
+    .fifthContLeft svg{
+        width: 90%;
+    }
+}
+
+@media screen and (min-width: 850px) and (max-width: 1223px){
+    .featuresActualHead{
+        width: 90%;
+    }
+    .featuresActualOne, .featuresActualTwo, .featuresActualThree{
+        width: 90%;
+    }
+    .featuresImg svg{
+        width: 100%;
+    }
+}
+
+@media screen and (max-width: 850px) and (min-width: 0px) {
+    .first{
+        flex-direction: column;
+    }
+    .firstLeft{
+        padding-left: 0;
+        width: 100%;
+        padding: 0px 20px;
+    }
+    .firstRight{
+        width: 100%;
+    }
+    .firstLeftHead{
+        width: 95%;
+        transform: scale(0.80);
+    }
+    .firstLeftPara{
+        width: 100%;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }
+    .headDownload button{
+        transform: scale(0.95);
+    }
+    .firstRightImg{
+        left: 0;
+        right: 0;
+    }
+    .firstRightImg svg{
+        width: 95%;
+    } 
+    .first{
+        margin-bottom: 600px;
+    }
+    .features{
+        flex-direction: column;
+    }
+    .featuresImg{
+        width: 100%;
+    }
+    .featuresImg svg{
+        width: 100%;
+    }
+    .featuresCont{
+        width: 100%;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+    }
+    .featuresActualHead{
+        transform: scale(0.80);
+    }
+    .featuresActualOne, .featuresActualTwo, .featuresActualThree{
+        width: 100%;
+        justify-content: center;
+        align-items: center;
+        transform: scale(0.80);
+    }
+    .advantagesActualCont{
+        width: 100%;
+        padding: 0px 20px;
+    }
+    .advantagesActualImg{
+        width: 100%;
+
+    }
+    .advantagesActualImg svg{
+        width: 100%;
+        left: 0;
+        right: 0;
+        margin: 0;
+        padding: 0;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }
+    .advantagesCont{
+        flex-direction: column;
+        margin-top: 100px;
+    }
+    .advantagesActualHead{
+        width: 90%;
+    }
+    .customCont{
+        flex-direction: column;
+    }
+    .customActualImg{
+        width: 100%;
+    }
+    .customActualImg svg{
+        width: 100%;
+    }
+    .customActualCont{
+        width: 100%;
+    }
+    .customActualOneHead{
+        padding-left: 30px;
+        width: 90%;
+    }
+    .customActualOnePara{
+        padding-left: 30px;
+        width: 90%;
+    }
+    .fifthTest{
+        padding: 0px 20px;
+    }
+    .fifthCont{
+        flex-direction: column;
+    }
+    .fifthContLeft{
+        width: 100%;
+    }
+    .fifthContLeft svg{
+        width: 100%;
+    }
+    .fifthContRight{
+        width: 100%;
+    }
+    .testi{
+        padding: 0px 20px;
+    }
+}
+
+@media screen and (max-width: 490px) {
+    .featuresActualHead{
+        transform: scale(0.50);
+        width: 100%;
+    }
+}
+
+@media screen and (max-width: 445px) {
+    .featuresActualOne, .featuresActualTwo, .featuresActualThree{
+        transform: scale(0.65);
+    }
+}
+
+@media screen and (max-width: 370px) {
+    .featuresActualOne, .featuresActualTwo, .featuresActualThree{
+        transform: scale(0.55);
+    }
+}
+
+@media screen and (min-width: 423px) and (max-width: 572px) {
+    .firstLeftHead{
+        margin-bottom: 10%;
+        transform: scale(0.70);
+    }
+    .firstLeftPara{
+        margin-bottom: 10%;
+        transform: scale(0.80);
+    }
+}
+
+@media screen and (max-width: 423px) {
+    .firstLeftHead{
+        margin-bottom: 20%;
+        transform: scale(0.65);
+    }
+    .firstLeftPara{
+        margin-bottom: 15%;
+        transform: scale(0.75);
+    }
+    .headDownload button{
+        transform: scale(0.80);
+    }
+    .firstLeftWatch a{
+        transform: scale(0.80);
+    }
+    .firstLeftStarted{
+        flex-direction: column;
+    }
+    .firstLeftWatch{
+        margin-top: 20px;
+    }
+}
+
+@media screen and (max-width: 1222px) {
+    .faqHead{
+        padding: 0px 20px;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }
+}
+@media screen and (max-width: 507px) {
+    .faqHead{
+        padding: 0px 20px;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        transform: scale(0.80);
+    }
+}
+@media screen and (max-width: 390px) {
+    .faqHead{
+        margin-top: 100px;
+        padding: 0px 20px;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        transform: scale(0.60);
+    }
+}
+@media screen and (max-width: 1157px) {
+    .faqCont{
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+    }
+    .seventh{
+        margin-top: 500px;
+    }
+}
+
+@media screen and (max-width: 586px) {
+    .one, .two, .three, .four, .five, .six{
+        transform: scale(0.70);
+        margin-top: -10%;
+    }
+}
+@media screen and (max-width: 416px) {
+    .one, .two, .three, .four, .five, .six{
+        transform: scale(0.50);
+        margin-top: -15%;
+    }
+}
+
+@media screen and (max-width: 1178px) {
+    .eighthImg{
+        padding: 0px 20px;
+    }
+    .eighthImg svg{
+        width: 100%;
+    }
+}
+
+@media screen and (max-width: 1132px) {
+    .footerOne{
+        flex-direction: column;
+    }
+    .footerEnd{
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }
+    .footer{
+        margin-top: 400px;
+    }
+}
+@media screen and (max-width: 495px) {
+    .footer{
+        transform: scale(0.80);
+    }
+}
+@media screen and (max-width: 326px) {
+    .footer{
+        transform: scale(0.60);
+    }
+}
